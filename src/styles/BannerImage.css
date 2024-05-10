@@ -1,0 +1,39 @@
+.conteneur {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: none;
+    background-color: black;
+    max-width: 1230px;
+
+
+}
+
+h1 {
+    position: absolute;
+    font-size: 48px;
+    color: white;
+    font-family: "Montserrat";
+    text-shadow: 1px 0 0 black, 1px 1px 0 black, 0 1px 0 black, -1px 1px 0 black, -1px 0 0 black, -1px -1px 0 black, 0 -1px 0 black, 1px -1px 0 black;
+    font-weight: 700;
+
+
+}
+
+
+.banner-image {
+    width: 1240px;
+    object-fit: cover;
+    height: 223px;
+    border-radius: 25px;
+    display: flex;
+    opacity: 0.5;
+
+
+}
+
+.banner-image__2 {
+    opacity: 100;
+}

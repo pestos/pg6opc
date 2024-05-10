@@ -1,0 +1,43 @@
+.contentDivCollapse {
+    width: 1099px;
+}
+
+.clickableDiv {
+    background-color: #FF6060;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    max-width: 1099px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.content {
+    @extend .clickableDiv;
+    color: black;
+    background-color: #F6F6F6;
+    transition: transform 1s ease;
+    font-size: 18px;
+    font-family: 'Montserrat';
+
+
+
+
+}
+
+.arrow {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrow.active {
+    transform: rotate(-180deg);
+}
+
+
+
+/* Transition de la transformation */
