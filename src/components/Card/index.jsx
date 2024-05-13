@@ -23,22 +23,17 @@ function useDataCard() {
     return data;
 }
 
-function Carre({ title }) {
-    return (
-        <div className="cardRed">
-            <h2>{title}</h2>
-        </div>
-    );
-}
 
 function Card() {
     const data = useDataCard();
 
     const carres = data.map((item, index) => (
-        <Carre key={index} title={item.title} />
+        <div className="cardRed">
+            <h2>{item.title}</h2>
+        </div>
     ));
 
-    return <div className="conteneur conteneur__card">{carres}</div>;
+    return <section className="conteneur conteneur__card">{carres}</section>;
 }
 
 export default Card;

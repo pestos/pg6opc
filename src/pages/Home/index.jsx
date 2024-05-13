@@ -5,7 +5,7 @@ import "../../layout/Header/Header.css";
 
 import Banner from "../../components/Banner/index.jsx";
 import Card from "../../components/Card/index.jsx"
-import Image from "../../assets/bannerImage.png"
+import Image from "../../components/Banner/bannerImage.png";
 
 function Home() {
     const texte = "Chez vous, partout et ailleurs"

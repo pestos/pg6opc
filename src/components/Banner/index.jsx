@@ -1,5 +1,6 @@
 import "../Banner/BannerImage.css";
 
+
 function Banner(props) {
     return (
         <div class="conteneurBis">

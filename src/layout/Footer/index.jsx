@@ -1,4 +1,4 @@
-import "../../styles/Footer.css";
+import "../Footer/Footer.css";
 import kasaFooter from "../Footer/kasaFooter.png";
 
 function Footer() {
