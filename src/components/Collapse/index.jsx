@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Arrow from "../../assets/arrow.png";
-import "../../styles/Collapse.scss";
+import "../Collapse/Collapse.scss";
 
 const Collapse = ({ title, children }) => {
   const [collapsed, setCollapsed] = useState(true);

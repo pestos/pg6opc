@@ -1,12 +1,11 @@
-.conteneur {
-
+.conteneurBis {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
     border: none;
     background-color: black;
-    max-width: 1230px;
+    object-fit: cover;
 
 
 }
@@ -24,7 +23,7 @@ h1 {
 
 
 .banner-image {
-    width: 1240px;
+    width: 100%;
     object-fit: cover;
     height: 223px;
     border-radius: 25px;

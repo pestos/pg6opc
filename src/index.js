@@ -1,20 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "../src/styles/index.css";
+
 import Home from "../src/pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "../src/components/Header/index";
-import Footer from "../src/components/Footer/index";
-import Apropos from "../src/pages/Apropos/index";
+import Header from "./layout/Header/index";
+import Footer from "../src/layout/Footer/index.jsx";
+import Apropos from "../src/pages/Apropos/index.jsx";
+import Error404 from "../src/pages/Error/index.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <Router>
             <Header />
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/apropos" element={<Apropos />} />
+                <Route path="/error404" element={<Error404 />} />
             </Routes>
             <Footer />
         </Router>
