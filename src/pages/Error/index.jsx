@@ -1,12 +1,14 @@
 import Error from "../../assets/404.png";
 import { Link } from "react-router-dom";
-import "../Error/Error.css";
+import "../Error/Error.scss";
 
 function Error404() {
     return (
-        <div>
+        <div className="conteneur404">
             <img alt="conteneur404" src={Error}></img>
-            <p>Oups! La page que vous demander n'existe pas.</p>
+            <p className="title">
+                Oups! La page que vous demander n'existe pas.
+            </p>
             <Link to="/">Retourner sur la page d'acceuil</Link>
         </div>
     );

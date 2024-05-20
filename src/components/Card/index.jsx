@@ -23,13 +23,21 @@ function useDataCard() {
     return data;
 }
 
-
 function Card() {
     const data = useDataCard();
 
-    const carres = data.map((item, index) => (
-        <div className="cardRed">
-            <h2>{item.title}</h2>
+    const handleClick = (id) => {
+        window.location.href = `/logement/${id}`;
+    };
+
+    const carres = data.map((item) => (
+        <div
+            key={item.id}
+            data-id={item.id}
+            className="cardRed"
+            onClick={() => handleClick(item.id)}
+        >
+            <h2 className="title">{item.title}</h2>
         </div>
     ));
 
