@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "../Slideshow/Slideshow.scss"; // Assurez-vous que ce fichier CSS est bien créé pour le style
 
 function Slideshow({ slide }) {
-    // Recevoir les images comme prop
     const [current, setCurrent] = useState(0);
-    const length = slide.length; // Utiliser images.length pour obtenir le nombre d'images
+    const length = slide.length;
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
@@ -21,23 +20,35 @@ function Slideshow({ slide }) {
 
     return (
         <section className="carousel">
-            <button className="left-arrow" onClick={prevSlide}>
-                &lt;
-            </button>
-            <button className="right-arrow" onClick={nextSlide}>
-                &gt;
-            </button>
+            {length > 1 && (
+                <>
+                    <button className="left-arrow" onClick={prevSlide}>
+                        &lt;
+                    </button>
+                    <button className="right-arrow" onClick={nextSlide}>
+                        &gt;
+                    </button>
+                </>
+            )}
+
             {slide.map((image, index) => (
                 <div
                     className={index === current ? "slide active" : "slide"}
                     key={index}
                 >
                     {index === current && (
-                        <img
-                            src={image}
-                            alt="carousel slide"
-                            className="image"
-                        />
+                        <>
+                            <img
+                                src={image}
+                                alt="carousel slide"
+                                className="image"
+                            />
+                            {length > 1 && (
+                                <div className="slide-number">
+                                    {index + 1}/{length}
+                                </div>
+                            )}
+                        </>
                     )}
                 </div>
             ))}

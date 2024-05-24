@@ -1,13 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Kasa from "../Header/kasa.png";
 
-function Header() {
+function Header(item) {
+    const location = useLocation();
     return (
         <div class="bodyHeader">
             <img class="img__Header" src={Kasa} alt="logo kasa" />
             <nav class="link">
-                <Link to="/">Accueil</Link>
-                <Link class="link__noBorder" to="/apropos">
+                <Link
+                    to="/"
+                    className={
+                        location.pathname === "/" ? "active" : "link__noBorder"
+                    }
+                >
+                    Accueil
+                </Link>
+                <Link
+                    to="/apropos"
+                    className={
+                        location.pathname.startsWith("/apropos")
+                            ? "active"
+                            : "link__noBorder"
+                    }
+                >
                     A Propos
                 </Link>
             </nav>
