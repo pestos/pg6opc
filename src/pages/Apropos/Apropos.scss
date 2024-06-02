@@ -5,3 +5,11 @@
     flex-direction: column;
 
 }
+@media (max-width: 480px) {
+    .contentDiv {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+    }
+}

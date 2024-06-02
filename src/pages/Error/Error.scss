@@ -1,24 +1,48 @@
 .conteneur404 {
+
     margin-top: 150px;
     margin-bottom: 100px;
     width: 1290px;
-
     display: flex;
     align-items: center;
     flex-direction: column;
-
-
     gap: 50px;
 
     img {
         width: 597px;
         height: 263px;
     }
+}
 
-    .title {
+.title {
         color: #FF6060;
         font-size: 36px;
-    }
+        text-shadow: none;
+}
+@media (max-width:480px) {
 
+    .conteneur404 {
 
+        margin-top: 150px;
+        margin-bottom: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        
+            img {
+                    width: 200px;
+                    height: 99px;
+                }
+        
+                        .title {
+                            display: flex;
+                            justify-content: center;
+                            font-size: 18px;
+                            width: 52%;
+                            font-weight: 500;
+                            word-wrap: break-word;
+                        }
+                        }
 }

@@ -31,3 +31,24 @@ a {
     height: 68px;
     width: 210px;
 }
+
+
+@media (max-width: 480px) {
+
+
+    .img__Header {
+        height: 50px;
+        width: 145px;
+    }
+
+    .link {
+        display: flex;
+        gap: 30px;
+        font-size: 16px;
+        font-family: "Montserrat";
+
+
+    }
+
+
+}

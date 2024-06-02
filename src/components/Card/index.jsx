@@ -6,7 +6,7 @@ function Card({ item }) {
     return (
         <Link to={`/logement/${item.id}`}>
             <div key={item.id} data-id={item.id} className="cardRed">
-                <img src={item.cover} alt="couverture logement" />
+                <img src={item.cover} alt={item.title + item.location} />
                 <h2 className="title">{item.title}</h2>
             </div>
         </Link>

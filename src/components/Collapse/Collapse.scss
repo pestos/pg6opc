@@ -1,5 +1,7 @@
 .contentDivCollapse {
-    width: 1099px;
+    width: 100%;
+        display: flex;
+        flex-direction: column;
 }
 
 .clickableDiv {
@@ -8,7 +10,6 @@
     padding: 10px;
     border-radius: 5px;
     display: flex;
-    max-width: 1099px;
     justify-content: space-between;
     align-items: center;
     h2 {
@@ -39,5 +40,49 @@
 }
 
 
+@media (max-width: 480px) {
+    .contentDivCollapse {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
+        h2 {
+                font-size: 13px;
+            }
+        }
+        
+        .clickableDiv {
+            background-color: #FF6060;
+            color: white;
+            padding: 2px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+            h2 {
+                color: white;
+        
+            }
+        
+        }
+        
+        .content {
+            @extend .clickableDiv;
+            color: black;
+            background-color: #F6F6F6;
+            transition: transform 1s ease;
+            font-size: 12px;
+            font-family: 'Montserrat';
+        
+        }
+        
+        .arrow {
+            height: 16px;
+            width: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        }
 /* Transition de la transformation */

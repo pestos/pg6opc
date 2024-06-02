@@ -1,0 +1,32 @@
+.conteneurForm__NamePicture {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h2 {
+        font-size: 18px;
+        color: #FF6060;
+        font-family: "Montserrat";
+    }
+
+    img {
+        clip-path: ellipse(50% 50%);
+        object-fit: contain;
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conteneurForm__NamePicture {
+        h2 {
+            font-size: 12px;
+            width: 40%;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

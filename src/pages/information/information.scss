@@ -1,0 +1,101 @@
+.conteneur {
+    max-width: 1240px;
+
+    .conteneur__Tagstar {
+        display: grid;
+        align-items: center;
+
+    }
+}
+
+.conteneur__Collapse {
+    display: flex;
+    gap: 10px;
+
+    h2 {
+        color: white;
+        font-size: 18px;
+        padding: 2px;
+        font-weight: 700;
+    }
+}
+
+.sectionConteneur {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'conteneurForm_TitleName   conteneurForm__NamePicture'
+        'conteneur__Tagstar star-rating'
+        'conteneur_Collapse conteneur_Collapse';
+
+    .conteneurForm_TitleName {
+        grid-area: conteneurForm_TitleName;
+    }
+
+    .conteneur__Tagstar {
+        grid-area: conteneur__Tagstar;
+        justify-content: start;
+    }
+
+    .conteneurTag {
+        grid-area: conteneurTag;
+
+    }
+
+    .star-rating {
+        grid-area: star-rating;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .conteneurForm__NamePicture {
+        grid-area: conteneurForm__NamePicture;
+        justify-content: end;
+    }
+
+    .conteneur__Collapse {
+        grid-area: conteneur_Collapse;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionConteneur {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'conteneurForm_TitleName conteneurForm_TitleName '
+            'conteneur__Tagstar conteneur__Tagstar'
+            'star-rating conteneurForm__NamePicture'
+            'conteneur_Collapse conteneur_Collapse  ';
+        width: 100%;
+
+        .star-rating {
+
+            justify-content: start;
+            align-items: center;
+            gap: 0px;
+        }
+    }
+
+
+    .conteneur__Collapse {
+        grid-area: conteneur_Collapse;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+
+        h2 {
+            color: white;
+            font-size: 13px;
+            padding: 2px;
+            font-weight: 700;
+        }
+
+        .content {
+            font-size: 13px;
+        }
+    }
+}

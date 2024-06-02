@@ -56,3 +56,25 @@
     object-fit: cover;
 
 }
+@media (max-width: 480px) {
+    .image {
+        height: 255px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 3rem;
+        cursor: pointer;
+        color: white;
+        z-index: 10;
+    }
+
+    .slide-number {
+        display: none;
+    }
+}

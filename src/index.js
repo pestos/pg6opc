@@ -6,7 +6,8 @@ import Header from "./layout/Header/index";
 import Footer from "../src/layout/Footer/index.jsx";
 import Apropos from "../src/pages/Apropos/index.jsx";
 import Error404 from "../src/pages/Error/index.jsx";
-import FormAppartment from "../src/pages/FormAppartment/index.jsx";
+import FormAppartment from "./pages/information/index.jsx";
+import "../src/styles/App.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

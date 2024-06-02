@@ -17,3 +17,29 @@ img {
     width: 122px;
     height: 40px;
 }
+
+
+@media (max-width: 480px) {
+
+    p {
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .blackDiv {
+        background-color: black;
+        height: 209px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-family: 'Montserrat';
+        color: white;
+        font-weight: 500;
+        flex-direction: column;
+
+    }
+
+
+}

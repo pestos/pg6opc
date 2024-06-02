@@ -10,3 +10,16 @@
     gap: 10px;
     object-fit: none;
 }
+@media (max-width: 480px) {
+    .star-rating {
+        display: flex;
+    }
+
+    .star {
+        display: flex;
+        width: 18px;
+        height: 18px;
+        object-fit: cover;
+    }
+
+}
