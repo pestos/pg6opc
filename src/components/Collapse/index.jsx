@@ -10,13 +10,25 @@ const Collapse = ({ title, children }) => {
   };
 
   return (
-    <div class="contentDivCollapse" >
-      <div className="clickableDiv" onClick={toggleCollapse} style={{ cursor: 'pointer' }}>
-        <h2>{title}</h2>
-        <img className={`arrow ${!collapsed ? 'active' : ''}`} src={Arrow} alt="" />
+      <div class="contentDivCollapse">
+          <div
+              className="clickableDiv"
+              onClick={toggleCollapse}
+              style={{ cursor: "pointer" }}
+          >
+              <h2>{title}</h2>
+              <img
+                  className={`arrow ${!collapsed ? "active" : ""}`}
+                  src={Arrow}
+                  alt=""
+              />
+          </div>
+          {!collapsed && (
+              <div className="content">
+                  <h3>{children}</h3>
+              </div>
+          )}
       </div>
-      {!collapsed && <div className="content">{children}</div>}
-    </div>
   );
 };
 

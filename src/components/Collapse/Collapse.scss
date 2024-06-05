@@ -1,36 +1,41 @@
 .contentDivCollapse {
     width: 100%;
-        display: flex;
+    display: flex;
         flex-direction: column;
+h2 {
+        font-size: 13px; // Taille de police par défaut pour mobile
+    }
 }
 
 .clickableDiv {
     background-color: #FF6060;
     color: white;
-    padding: 10px;
+    padding: 2px; // Padding par défaut pour mobile
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     h2 {
-            color: white;
-        }
-
+        color: white;
+        
 }
-
+}
 .content {
     @extend .clickableDiv;
-    color: black;
     background-color: #F6F6F6;
     transition: transform 1s ease;
-    font-size: 18px;
-    font-family: 'Montserrat';
-
+h3 {
+        font-size: 12px; // Taille de police par défaut pour mobile
+        font-family: 'Montserrat';
+        color: black;
+            font-weight: 400;
+        }
 }
 
 .arrow {
-    height: 32px;
-    width: 32px;
+    height: 16px; // Taille par défaut pour mobile
+        width: 16px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -39,50 +44,29 @@
     transform: rotate(-180deg);
 }
 
+@media (min-width: 481px) {
 
-@media (max-width: 480px) {
     .contentDivCollapse {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        h2 {
-                font-size: 13px;
-            }
-        }
-        
-        .clickableDiv {
-            background-color: #FF6060;
-            color: white;
-            padding: 2px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        
             h2 {
-                color: white;
-        
+                font-size: 24px;
             }
-        
         }
-        
+        .clickableDiv {
+            padding: 10px;
+    
+            h2 {
+                font-size: 24px;
+            }
+        }
         .content {
-            @extend .clickableDiv;
-            color: black;
-            background-color: #F6F6F6;
-            transition: transform 1s ease;
-            font-size: 12px;
-            font-family: 'Montserrat';
-        
+            h3 {
+                font-size: 18px;
         }
-        
+        }
+    
         .arrow {
-            height: 16px;
-            width: 16px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            height: 32px;
+            width: 32px;
         }
-        
+    
         }
-/* Transition de la transformation */

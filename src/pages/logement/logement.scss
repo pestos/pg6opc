@@ -1,0 +1,102 @@
+.container {
+    max-width: 100%; // Taille par défaut pour mobile
+
+    .container__Tagstar {
+        display: grid;
+        align-items: center;
+    }
+}
+
+.container__Collapse {
+    display: flex;
+    gap: 10px;
+    flex-direction: column; // Flex direction par défaut pour mobile
+    width: 100%; // Taille par défaut pour mobile
+    margin-top: 20px; // Ajouté pour espacement sur mobile
+
+    h2 {
+        color: white;
+        font-size: 13px; // Taille par défaut pour mobile
+        padding: 2px;
+        font-weight: 700;
+    }
+
+    .content {
+        font-size: 13px; // Taille par défaut pour mobile
+    }
+}
+
+.sectionContainer {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'containerForm_TitleName containerForm_TitleName'
+        'container__Tagstar container__Tagstar'
+        'star-rating containerForm__NamePicture'
+        'container_Collapse container_Collapse';
+    width: 100%; // Taille par défaut pour mobile
+
+    .containerForm_TitleName {
+        grid-area: containerForm_TitleName;
+    }
+
+    .container__Tagstar {
+        grid-area: container__Tagstar;
+        justify-content: start;
+    }
+
+    .conteneurTag {
+        grid-area: containerTag;
+    }
+
+    .star-rating {
+        grid-area: star-rating;
+        justify-content: start; // Justification par défaut pour mobile
+        align-items: center;
+        gap: 0px; // Espace réduit pour mobile
+    }
+
+    .containerForm__NamePicture {
+        grid-area: containerForm__NamePicture;
+        justify-content: end;
+    }
+
+    .container__Collapse {
+        grid-area: container_Collapse;
+    }
+}
+
+@media (min-width: 481px) {
+    .container {
+        max-width: 1240px; // Taille pour les écrans plus larges
+    }
+
+    .container__Collapse {
+        flex-direction: row; // Flex direction pour les écrans plus larges
+        width: auto; // Taille pour les écrans plus larges
+        margin-top: 0; // Supprimer l'espacement supérieur pour les écrans plus larges
+
+        h2 {
+            font-size: 18px; // Taille pour les écrans plus larges
+        }
+
+        .content {
+            font-size: 18px; // Taille pour les écrans plus larges
+        }
+    }
+
+    .sectionContainer {
+        grid-template-columns: 1fr 1fr; // Grille pour les écrans plus larges
+        grid-template-areas:
+            'containerForm_TitleName containerForm__NamePicture'
+            'container__Tagstar star-rating'
+            'container_Collapse container_Collapse';
+        width: auto; // Taille pour les écrans plus larges
+
+        .star-rating {
+            justify-content: end; // Justification pour les écrans plus larges
+        }
+    }
+}

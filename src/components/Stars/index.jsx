@@ -1,7 +1,7 @@
 import React from "react";
-import "../Star/stars.scss"; // Assurez-vous de créer ce fichier CSS pour les styles
-import starActive from "../Star/star-active.png";
-import starDisable from "../Star/stargray.png";
+import "./stars.scss"; // Assurez-vous de créer ce fichier CSS pour les styles
+import starActive from "../Stars/star-active.png";
+import starDisable from "../Stars/stargray.png";
 
 const StarRating = ({ rating }) => {
     return (

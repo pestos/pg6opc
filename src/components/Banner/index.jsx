@@ -3,7 +3,7 @@ import "../Banner/BannerImage.css";
 
 function Banner(props) {
     return (
-        <div class="conteneurBis">
+        <div class="containerBis">
             <img
                 class={props.className}
                 src={props.bannerImage}

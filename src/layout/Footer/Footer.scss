@@ -1,0 +1,30 @@
+.blackDiv {
+    background-color: black;
+    height: 209px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px; // Taille par défaut pour mobile
+    font-family: 'Montserrat';
+    color: white;
+    font-weight: 500;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+img {
+    width: 122px;
+    height: 40px;
+}
+
+p {
+    font-size: 12px;
+    width: 100px;
+}
+
+@media (min-width: 481px) {
+    .blackDiv {
+        font-size: 24px; // Taille pour les écrans plus larges
+    }
+}

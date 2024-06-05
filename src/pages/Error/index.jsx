@@ -4,8 +4,8 @@ import "../Error/Error.scss";
 
 function Error404() {
     return (
-        <div className="conteneur404">
-            <img alt="conteneur404" src={Error}></img>
+        <div className="container404">
+            <img alt="container404" src={Error}></img>
             <p className="title">
                 Oups! La page que vous demander n'existe pas.
             </p>

@@ -2,19 +2,15 @@
   text-align: center;
 }
 
-
 #root {
-  width: 1240px;
+  width: 100%; // Taille par défaut pour mobile
+  padding: 20px; // Ajout de padding par défaut pour mobile
 }
-
-
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -47,10 +43,9 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 481px) {
   #root {
-
-    padding: 20px;
+    width: 1240px; // Taille pour les écrans plus larges
+    padding: 0; // Supprimer le padding pour les écrans plus larges
   }
-
 }

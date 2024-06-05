@@ -1,0 +1,20 @@
+.star-rating {
+    display: flex;
+    gap: 10px;
+}
+
+.star {
+    display: flex;
+    width: 18px; // Taille par défaut pour mobile
+    height: 18px; // Taille par défaut pour mobile
+    object-fit: cover;
+}
+
+@media (min-width: 481px) {
+    .star {
+        width: 24px; // Taille pour les écrans plus larges
+        height: 24px; // Taille pour les écrans plus larges
+        gap: 10px;
+        object-fit: none;
+    }
+}

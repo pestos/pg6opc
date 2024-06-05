@@ -6,14 +6,15 @@
 
     .slide {
         opacity: 0;
-            transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
             width: 100%;
             height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-                }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        }
+
 .left-arrow,
 .right-arrow {
     position: absolute;
@@ -21,10 +22,10 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    font-size: 5rem;
+    font-size: 3rem; // Taille par défaut pour mobile
     cursor: pointer;
     color: white;
-        z-index: 10;
+    z-index: 10;
 }
 
 .left-arrow {
@@ -34,15 +35,9 @@
 .right-arrow {
     right: 10px;
 }
+
 .slide-number {
-    position: absolute;
-    bottom: 10px;
-    justify-content: center;
-    font-family: "Montserrat";
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 18px;
+    display: none; // Par défaut pour mobile
 }
 
 .slide.active {
@@ -51,30 +46,30 @@
 
 .image {
     width: 100%;
-    height: 415px;
+    height: 255px; // Taille par défaut pour mobile
     border-radius: 20px;
     object-fit: cover;
-
 }
-@media (max-width: 480px) {
-    .image {
-        height: 255px;
-    }
 
+@media (min-width: 481px) {
     .left-arrow,
     .right-arrow {
+        font-size: 5rem; // Taille pour les écrans plus larges
+        }
+        
+        .slide-number {
+            display: block; // Affichage pour les écrans plus larges
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: none;
-        border: none;
-        font-size: 3rem;
-        cursor: pointer;
+        bottom: 10px;
+            justify-content: center;
+            font-family: "Montserrat";
         color: white;
-        z-index: 10;
+        padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 18px;
     }
 
-    .slide-number {
-        display: none;
+        .image {
+            height: 415px; // Taille pour les écrans plus larges
     }
 }

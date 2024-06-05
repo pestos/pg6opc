@@ -1,48 +1,45 @@
-.conteneur404 {
-
+.container404 {
     margin-top: 150px;
     margin-bottom: 100px;
-    width: 1290px;
+    width: 100%; // Taille par défaut pour mobile
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 50px;
 
     img {
-        width: 597px;
-        height: 263px;
+        width: 200px; // Taille par défaut pour mobile
+            height: 99px; // Taille par défaut pour mobile
     }
 }
 
 .title {
-        color: #FF6060;
-        font-size: 36px;
+    color: #FF6060;
+    font-size: 18px; // Taille par défaut pour mobile
         text-shadow: none;
+    display: flex; // Ajouté pour mobile
+        justify-content: center; // Ajouté pour mobile
+        width: 52%; // Ajouté pour mobile
+        font-weight: 500; // Ajouté pour mobile
+        word-wrap: break-word; // Ajouté pour mobile
 }
-@media (max-width:480px) {
 
-    .conteneur404 {
+@media (min-width: 481px) {
+    .container404 {
+        width: 1290px; // Taille pour les écrans plus larges
 
-        margin-top: 150px;
-        margin-bottom: 100px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 50px;
-        
-            img {
-                    width: 200px;
-                    height: 99px;
-                }
-        
-                        .title {
-                            display: flex;
-                            justify-content: center;
-                            font-size: 18px;
-                            width: 52%;
-                            font-weight: 500;
-                            word-wrap: break-word;
-                        }
-                        }
-}
+        img {
+            width: 597px; // Taille pour les écrans plus larges
+                height: 263px; // Taille pour les écrans plus larges
+            }
+            }
+            
+            .title {
+        font-size: 36px; // Taille pour les écrans plus larges
+            width: auto; // Réinitialisation pour les écrans plus larges
+            display: block; // Réinitialisation pour les écrans plus larges
+            justify-content: flex-start; // Réinitialisation pour les écrans plus larges
+            font-weight: normal; // Réinitialisation pour les écrans plus larges
+            word-wrap: normal; // Réinitialisation pour les écrans plus larges
+        }
+        }

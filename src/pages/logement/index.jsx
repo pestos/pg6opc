@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Slideshow from "../../components/Slideshow";
-import FormTags from "../../components/FormTags";
 import Collapse from "../../components/Collapse";
-import "./information.scss";
+import "./logement.scss";
 import { getData } from "../../services/apiService";
-import Tag from "../../components/Tag";
-import StarRating from "../../components/Star";
+import Tags from "../../components/Tags";
+import StarRating from "../../components/Stars";
 import Host from "../../components/Host";
+import Description from "../../components/Description";
 
 function FormAppartment() {
     const { id } = useParams(); // Utilisez useParams pour obtenir l'ID de l'URL
@@ -46,18 +46,18 @@ function FormAppartment() {
     }
 
     return (
-        <div className="conteneur">
+        <div className="container">
             <Slideshow slide={data.pictures} />
-            <section className="sectionConteneur">
-                <FormTags title={data.title} location={data.location} />
+            <section className="sectionContainer">
+                <Description title={data.title} location={data.location} />
                 <Host host={data.host.name} picture={data.host.picture} />
-                <div className="conteneur__Tagstar">
-                    <Tag data={data.tags} />
+                <div className="container__Tagstar">
+                    <Tags data={data.tags} />
                 </div>
                 <div className="star-rating">
                     <StarRating rating={data.rating} />
                 </div>
-                <div className="conteneur__Collapse">
+                <div className="container__Collapse">
                     <Collapse title="Description" children={data.description} />
                     <Collapse title="Equipements">
                         <ul>

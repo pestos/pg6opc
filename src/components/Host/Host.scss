@@ -1,32 +1,33 @@
-.conteneurForm__NamePicture {
+.containerForm__NamePicture {
     display: flex;
     align-items: center;
     gap: 10px;
 
     h2 {
-        font-size: 18px;
+        font-size: 12px; // Taille par défaut pour mobile
         color: #FF6060;
         font-family: "Montserrat";
+        width: 50px; // Largeur par défaut pour mobile
     }
 
     img {
         clip-path: ellipse(50% 50%);
         object-fit: contain;
-        width: 64px;
-        height: 64px;
+        width: 32px; // Taille par défaut pour mobile
+            height: 32px; // Taille par défaut pour mobile
     }
 }
 
-@media (max-width: 480px) {
-    .conteneurForm__NamePicture {
+@media (min-width: 481px) {
+    .containerForm__NamePicture {
         h2 {
-            font-size: 12px;
-            width: 40%;
+            font-size: 18px; // Taille pour les écrans plus larges
+                width: auto; // Réinitialisation de la largeur pour les écrans plus larges
         }
 
         img {
-            width: 32px;
-            height: 32px;
+            width: 64px; // Taille pour les écrans plus larges
+                height: 64px; // Taille pour les écrans plus larges
         }
     }
 }

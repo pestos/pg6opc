@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../Home/index.css";
-import "../../layout/Header/Header.css";
+import "../Home/Home.scss";
+import "../../layout/Header/Header.scss";
 import { getData } from "../../services/apiService";
 
 import Banner from "../../components/Banner/index.jsx";
@@ -33,9 +33,9 @@ function Home() {
     }, []);
 
     return (
-        <div className="conteneur">
+        <div className="container">
             <Banner bannerImage={Image} texte={texte} className={fileCss} />
-            <section className="conteneur__card">
+            <section className="container__card">
                 {data.map((item) => (
                     <Card key={item.id} item={item} />
                 ))}
