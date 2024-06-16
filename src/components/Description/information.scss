@@ -45,6 +45,9 @@
 }
 
 @media (min-width: 481px) {
+    .containerForm {
+            grid-column: 1/1;
+        }
     .containerForm__TitleName {
         h1 {
             font-size: 36px; // Taille pour les écrans plus larges
@@ -53,5 +56,6 @@
         h2 {
             font-size: 18px; // Taille pour les écrans plus larges
         }
+    
     }
 }
